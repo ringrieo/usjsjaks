@@ -172,12 +172,11 @@ startBtn.addEventListener("click", startQuiz);
 restartBtn.addEventListener("click", startQuiz);
 
 function startQuiz() {
+  document.getElementById("start-screen").classList.add("hidden");
+  document.getElementById("quiz-container").classList.remove("hidden");
   currentQuestion = 0;
   score = 0;
-  startScreen.classList.add("hidden");
-  resultScreen.classList.add("hidden");
-  quizScreen.classList.remove("hidden");
-  loadQuestion();
+  showQuestion();
 }
 
 function loadQuestion() {
